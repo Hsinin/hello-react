@@ -1,0 +1,8 @@
+
+视频7
+1. 构造函数、初始化
+2. ES6中用箭头函数替换bind(this)，onClick={() => this.onMakeOlder()}
+3. state 改变才会导致 dom 改变
+
+视频8
+1. this.setState()
