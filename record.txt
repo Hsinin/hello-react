@@ -11,3 +11,21 @@
 1. 虚拟dom，diff算法
 2. F12展示dom刷新
 右上角三点 -> more tools -> Rendering -> Painting flashing 打上勾
+
+视频10
+1. props：只读
+2. state：有状态组件
+3. 无状态组件又叫函数式组件，相同输入其输出一定相同
+
+写法：
+es5：React.createClass
+es6：React.Component
+无状态组件写法
+
+什么时候会用到无状态组件写法？
+1. 不需要state，即不处理用户输入，组件的所有数据都依赖props传入；
+2. 不需要用到生命周期函数
+
+使用无状态组件写法的好处：
+1. 不需要说明类， 可以避免大量比如extends或constructor这样的代码
+2. 不需要显示声明this关键字
