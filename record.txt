@@ -6,3 +6,8 @@
 
 视频8
 1. this.setState()
+
+视频9
+1. 虚拟dom，diff算法
+2. F12展示dom刷新
+右上角三点 -> more tools -> Rendering -> Painting flashing 打上勾
