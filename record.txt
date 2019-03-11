@@ -35,10 +35,44 @@ es6：React.Component
 视频11
 子组件传值给父组件 home -> app
 子组件如何向父组件传值?
-其实很简单，概括起来就是：react中state改变了，组件才会update。父写好state和处理该state的函数，
-同时将函数名通过props属性值的形式传入子，子调用父的函数，同时引起state变化。
+1. 其实很简单，概括起来就是：react中state改变了，组件才会update。
+2. 父写好state和处理该state的函数，同时将函数名通过props属性值的形式传入子，
+3. 子调用父的函数，同时引起state变化（onChange={this.props.handleGender}）。
+
+bind(this)的作用：
+1.如果你不绑定this.handleVal方法，那么在事件发生并且精确调用这个方法时，方法内部的this会丢失指向。
+2.这不是React的原因，这是JavaScript中本来就有的。如果你传递一个函数名给一个变量，然后通过在变量后加括号()来调用这个方法，此时方法内部的this的指向就会丢失
+参考：https://www.cnblogs.com/DM428/p/7777539.html
 
 视频12
-组件间传值
 react是单向数据流
 通过父节点来传值
+
+父组件：a
+兄弟组件：a1、a2
+
+组件间传值(a1 -> a -> a2):
+1. a1 通过回调函数先传值给 a
+2. a 通过 props 传值给 a2
+
+视频13
+双向数据绑定
+表单的双向绑定，说到底不过是 （value 的单向绑定 + onChange 事件侦听）的一个语法糖，
+双向绑定的意思就是：model改变影响view，view改变反过来影响model。
+数据从V(view)->M(model)的绑定都是通过事件监听实现，M(model)->V(view)的绑定是通过state的改变来实现
+
+视频14
+组件生命周期
+1. mounting：已插入真实 DOM
+componentWillMount()
+componentDidMount()
+
+2. Updating：正在被重新渲染
+componentWillReceiveProps()
+shouldComponentUpdate
+componentWillUpdate
+componentDidUpdate 
+
+3. Unmounting：已移出真实 DOM
+componentWillUnmount
+
