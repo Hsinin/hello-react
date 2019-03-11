@@ -4,6 +4,17 @@ import Header from './components/Header';
 import Home from './components/Home';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+        gender: ''
+    };
+  }
+
+  handleVal(event){
+    this.setState({gender: event.target.value});
+  }
+
   render() {
     const user = {
       name: "zhangsan",
@@ -12,7 +23,8 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <Home name={"lisi"} initAge={23} user={user} gender={"男"}>
+        <div>用户性别: {this.state.gender}</div>
+        <Home name={"lisi"} initAge={23} user={user} handleGender={this.handleVal.bind(this)}>
           <p1>"home's children"</p1>
         </Home>
         {"APP"}

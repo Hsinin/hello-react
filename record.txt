@@ -1,3 +1,5 @@
+https://github.com/facebook/create-react-app
+npm start
 
 视频7
 1. 构造函数、初始化
@@ -29,3 +31,14 @@ es6：React.Component
 使用无状态组件写法的好处：
 1. 不需要说明类， 可以避免大量比如extends或constructor这样的代码
 2. 不需要显示声明this关键字
+
+视频11
+子组件传值给父组件 home -> app
+子组件如何向父组件传值?
+其实很简单，概括起来就是：react中state改变了，组件才会update。父写好state和处理该state的函数，
+同时将函数名通过props属性值的形式传入子，子调用父的函数，同时引起state变化。
+
+视频12
+组件间传值
+react是单向数据流
+通过父节点来传值

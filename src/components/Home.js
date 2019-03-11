@@ -28,6 +28,9 @@ class Home extends Component {
                       {this.props.user.hobbies.map((hobby,i)=><li key={i}>{hobby}</li>)}
                   </ul>
                   {this.props.children}
+                  <div>用户性别(Home): <input onChange={this.props.handleGender}/></div>
+                  
+
                 </div>
               </div>
             </div>
